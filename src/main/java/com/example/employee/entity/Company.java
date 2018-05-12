@@ -8,25 +8,25 @@ import javax.persistence.OneToMany;
 @Entity
 public class Company {
     @Id
-    private int companyId;
+    private int id;
     private String companyName;
     private int numberOfEmployees;
 
     public int getCompanyId() {
-        return companyId;
+        return id;
     }
 
     @Override
     public String toString() {
         return "Company{" +
-                "companyId=" + companyId +
+                "companyId=" + id +
                 ", companyName='" + companyName + '\'' +
                 ", numberOfEmployees=" + numberOfEmployees +
                 '}';
     }
 
     public void setCompanyId(int companyId) {
-        this.companyId = companyId;
+        this.id = companyId;
     }
 
     public String getCompanyName() {
@@ -47,7 +47,7 @@ public class Company {
 
     public Company(int companyId, String companyName, int numberOfEmployees) {
 
-        this.companyId = companyId;
+        this.id = companyId;
         this.companyName = companyName;
         this.numberOfEmployees = numberOfEmployees;
     }
